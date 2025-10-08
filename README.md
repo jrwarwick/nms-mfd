@@ -32,11 +32,11 @@ The community-minded coders and web designers all throughout the world wide web 
 # TODO:
  - proper linting of css, html, js
 
- - replicate display: 
-	- ship status
+ - replicate "canonical" displays: 
+	- ship id/status
 	x ships weapons
-	- ship speed ( + engines? fuel? )
-	- local planetary summary
+	- ship speed ( + pulse engine "throttle", pulse engine fuel )
+	- locality (planetary approach/summary)
 		- get the little status bar to be glued/pinned to the bottom without messing up the rest of flow
 		- figure out the little status bar text. "AZIMUTH 00J"? "ABM TH MJ"?  or maybe just replace with reasonably interesting sciency thing like planetary mass and/or derived gravitational factor.
 		- svg needs refinement: fainter, but the lat/long lines on the back (just a fainter ellipse) + better grav shadow centering 
@@ -57,6 +57,8 @@ The community-minded coders and web designers all throughout the world wide web 
  - custom display: simple To-Do/task list. shareable. Obivously the game has lots of great streamlined, guided features in this category, but when you have some big building or RP project, nice to have an option.
 
  - custom display: irc/matrix/xmpp/discord channel "feed" . A "comms" screen. in shared mode: a red-alert/panic button which alerts all other tuned in players.
+
+ - custom display: rules and/or coordinated implementation of Rock, Paper, Scissors, Lizard, Spock. But: Gek, Vy'Keen, Korvax, Sentinel, Anomaly
 
  - branch out a little and find some other displays, such as those on freighters and stations that might fit in as well.
 
@@ -83,6 +85,7 @@ The community-minded coders and web designers all throughout the world wide web 
 		- typing out text
 		- threat alarm
 		- incoming transmission
+		- autopilot
 
  - some gentle animations, maybe even slight touch-oriented interactivity.
  	+ svg circle for instance can definitely do a nice     transform: rotate(45deg);
