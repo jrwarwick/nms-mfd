@@ -63,6 +63,8 @@ body {
 	padding:.75rem;
 	margin:0;
 	/*width:100%;height:100%;*/
+	min-height: 96vh; /* I don't love this or completely understand it, but it worked on my chrome on windows workstation to prevent
+		the body from mysteriously being smaller than view port. https://medium.com/@a1guy/intriguing-relationship-between-viewport-body-element-and-backgrounds-a1346e853d64#f8b6 */
 }
 header {
 	border: .15rem solid LemonChiffon;
@@ -204,6 +206,13 @@ footer {
 	margin: .5rem;
 	padding: .5rem;
 	font-size:1.25rem;
+}
+footer.fullbar {  /*full bar is intended to be used with the footer element empty, to avoid lineheight.*/
+	/*width:97%;*/
+	/*height: 0;*/
+	background-color: LemonChiffon;
+	border:.2rem solid Khaki;
+	padding:.1rem;
 }
 
 
