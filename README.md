@@ -23,7 +23,7 @@ full screen note?
 "Inter" typeface by rsms.me
 Hello Games visual style, layout, concept, terms
 The community-minded coders and web designers all throughout the world wide web (thanks for the vignette code, animation techniques, etc.)
-
+https://upload.wikimedia.org/wikipedia/commons/d/d8/Caffeine.svg (optimized in this repo)
 
 # License
 [MIT](https://rem.mit-license.org/license.htm)
@@ -54,6 +54,8 @@ The community-minded coders and web designers all throughout the world wide web 
 
  - custom display: simple PoI list, system > planet > surface coord. shareable . Some kind of foreward-and-backward portal code cross-referencing
 
+ - custom display: galaxy.html with name, galactic plane and rough diagram, and distance from gravitational center.
+
  - custom display: simple To-Do/task list. shareable. Obivously the game has lots of great streamlined, guided features in this category, but when you have some big building or RP project, nice to have an option.
 
  - custom display: irc/matrix/xmpp/discord channel "feed" . A "comms" screen. in shared mode: a red-alert/panic button which alerts all other tuned in players.
@@ -72,6 +74,8 @@ The community-minded coders and web designers all throughout the world wide web 
  - on closer examination of the overlay projection and glitching effects, probably need a little overhaul, if matching and authenticity are (a/)the goal. Particularly the flicker and larger display projection scan line things
 
  - wipe-in could use a little more attention. Just a tiny delay before it starts and it needs a vertical leading edge/thin bar, maybe add in page load sound effect
+
+ - possibly the vignette effect needs to be moved to a stacked element and then use mix/blend mode of burn instead of just darkening.
 
  - limited special sauce data feed retrieval
 	- https://portalrepository.com/
