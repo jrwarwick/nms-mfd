@@ -62,6 +62,8 @@ https://upload.wikimedia.org/wikipedia/commons/d/d8/Caffeine.svg (optimized in t
 
  - custom display: rules and/or coordinated implementation of Rock, Paper, Scissors, Lizard, Spock. But: Gek, Vy'Keen, Korvax, Sentinel, Anomaly
 
+ - custom display molecular needs tap event on the molecule to cycle to other interesting molecules: hydrazine, graphene, hydrochloric acid, silicone rubber, silica, ethanol, kerosene, ATP, polyethylene, etc. Also off to the side stats for toxicity, radioactivity, acidity, etc.
+
  - branch out a little and find some other displays, such as those on freighters and stations that might fit in as well.
 
 

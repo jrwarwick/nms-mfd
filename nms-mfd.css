@@ -104,6 +104,22 @@ main {
 	text-shadow:0 0 .75rem #cc884499;
 }
 
+h1 {
+	margin:.5rem;
+}
+h2 {
+	margin:.5rem;
+	text-align:right
+}
+h2.trindicator {
+	margin:0 -.5rem 0 0;
+	padding:0;
+	line-height:.5rem;
+	top:0;
+	text-align:right;
+	font-weight:lighter;
+}
+
 table {
 /*TODO!*/	
 
