@@ -16,7 +16,11 @@ and to https://rsms.me/inter/
 	<style>
 		#molecular-model > img {
 			display:block;
-			width:80vh;
+			max-width:80vh;
+			max-height:56vh;
+		}
+		#molecule-name {
+			text-transform: capitalize;
 		}
 	</style>
 </head>
@@ -59,15 +63,28 @@ then figure a way to animate it rolling through
 				</td>
 				<td style="text-align:right;"> 
 					<p class="meterlabel" suspend-tyle="text-align:left; font-size:.75rem; word-spacing:.1rem; margin-left:2rem;">MOLECULAR STANDARD MODEL // NET CHARGE: 0</p> 
-					<p class="metric" id="molecular-model" suspend-tyle="text-alight:right; font-size:10rem; margin:0;padding:0 1rem 0 1rem;"><img src="Caffeine.svg" /></p> 
+					<p class="metric" id="molecular-model" suspend-tyle="text-alight:right; font-size:10rem; margin:0;padding:0 1rem 0 1rem;"><img id="molecular-model-graphic" src="Caffeine.svg" /></p> 
 				</td>
 			</tr>
 		</table>
+		<p id="molecule-name">:</p>
 	</main>
 	<footer class="fullbar"></footer>
 
 	<script>
 		//document.getElementById("shield").style.width = "78%";
+		
+		const Molecules = ["Caffeine","Hydrazine","Polysiloxane"];
+		var MoleculeIndex = 0;
+		document.getElementById("molecular-model-graphic").onclick = function(){
+			MoleculeIndex = (MoleculeIndex + 1) % Molecules.length;
+			console.log(MoleculeIndex);
+			loadMolecule(Molecules[MoleculeIndex]);
+		};
+		function loadMolecule(moleculeName) {
+			document.getElementById("molecular-model-graphic").src = moleculeName+".svg";
+			document.getElementById("molecule-name").innerText = moleculeName;
+		}
 
 	</script>
 </body>
