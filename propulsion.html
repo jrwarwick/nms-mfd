@@ -45,13 +45,13 @@ then figure a way to animate it rolling through
 					-->
 					<span style="float:left; position:relative; top:0;left:0; margin:-7.5rem 0 0 -.9rem; font-size:4rem;">&dot; </span>
 					<p style="text-align:left; vertical-align:bottom; bottom:0; left:0; font-size:2.5rem; padding:0; margin-bottom:-.5rem;">
-						<button style="display:block;margin:.25rem .25rem -.25rem 1.5rem;">&ggg;</button> 
+						<button id="booster" style="display:block;margin:.25rem .25rem -.25rem 1.5rem;">&ggg;</button> 
 						&lltri;
 					</p> 
 				</td>
 				<td style="text-align:right;"> 
 					<p class="meterlabel" suspend-tyle="text-align:left; font-size:.75rem; word-spacing:.1rem; margin-left:2rem;">SPEEDOMETER READING<!--PROXIMAL GRAVITATION 2.75uG--></p> 
-					<p class="metric" suspend-tyle="text-alight:right; font-size:10rem; margin:0;padding:0 1rem 0 1rem;">1000u/s</p> 
+					<p class="metric" id="speed" suspend-tyle="text-alight:right; font-size:10rem; margin:0;padding:0 1rem 0 1rem;">1000u/s</p> 
 				</td>
 			</tr>
 			<tr >
@@ -73,7 +73,15 @@ then figure a way to animate it rolling through
 	<footer class="fullbar"></footer>
 
 	<script>
+		var gSpeed = 1000;
 		//document.getElementById("shield").style.width = "78%";
+		document.getElementById("booster").addEventListener("click", (event) => {
+			document.getElementById("throttle").innerHTML += "&block;";
+			//TODO: limit in a reasonable way. At least the speed bar's width.
+			gSpeed += 16;
+			document.getElementById("speed").innerText = gSpeed.toString() + "u/s";
+			//TODO: might be cool to have that boost speed hang and then fall off after a little while.
+		});
 
 	</script>
 </body>
