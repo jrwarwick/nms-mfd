@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- 
-Great thanks to HelloGames,
-and to https://rsms.me/inter/ 
--->
+<!--,
+ __/  Great thanks to HelloGames,
+/     and to https://rsms.me/inter/ 
+'-->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -13,6 +13,58 @@ and to https://rsms.me/inter/
 	<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 	<link rel="stylesheet" href="nms-mfd.css">
 	<title>NMS MFD - WEAPONS</title>
+	<style>
+		/* V1
+		table {
+			border: .15rem solid WhiteSmoke; border-collapse:collapse; width:100%;
+		}
+		table td {
+			border: .05rem solid whitesmoke;
+		}
+		*/
+		table.weapons {
+			border: none; border-collapse:collapse; width:100%;
+		}
+		table.weapons td {
+	
+		}
+		td.emission {
+			width:35%; 
+			border-top: .1rem solid whitesmoke;
+			border-right:none;
+			border-bottom: .1rem solid whitesmoke;
+			border-left: .1rem solid whitesmoke;
+		}
+		td.nominal-emission {
+			width:35%; 
+			border-top: .1rem solid whitesmoke;
+			border-right:.1rem solid whitesmoke;
+			border-bottom: .1rem solid whitesmoke;
+			border-left: none;
+		}
+		td#ammunition {
+			border: .1rem solid whitesmoke;
+			text-align:center;
+			font-size:6rem; margin:0;padding:0;
+		}
+		td#status {
+			width:30%; padding-bottom:1.25rem; vertical-align:bottom; text-align:center; 
+			border-top: .1rem solid whitesmoke;
+			border-right:none;
+			border-bottom: none;
+			border-left: none;
+		}
+		.critical{
+			font-size:6rem; font-weight:bold; color: maroon;
+		}
+		h2.lower-trindicator {
+			margin: 0 -.1rem 0 0;
+			padding: 0;
+			top: 0;
+			text-align: right;
+			font-weight: lighter;
+		}
+	</style>
 </head>
 
 <body class="wipe-in-effect">
@@ -24,18 +76,20 @@ and to https://rsms.me/inter/
 		<h2 class="trindicator">&urtri;</h2>
 		<h1>Photon Cannon</h1>
 
-		<table style="border: .15rem solid WhiteSmoke; border-collapse:collapse; width:100%;" border="2"> <!-- 3 columns and 4 rows, with some spanning -->
+		<table class="weapons"> <!-- 3 columns and 4 rows, with some spanning -->
 			<tr>
-				<td rowspan="2" style="width:35%; border-right:none;"> <p style="text-align:right; font-size:12rem; margin:-.75rem; padding:.25rem 1.25rem .25rem .25rem;">0</p> </td>
-				<td style="width:35%; border-left:none;"> <p style="text-align:right; font-size:.75rem; word-spacing:.1rem; margin-right:2rem;"> 4.79MJ NOMINAL EMISSION</td>
-				<td rowspan="3" style="width:30%; padding-bottom:1.25rem; vertical-align:bottom; text-align:center; border-left:none;"> 
-					 <span class="inversion" style="padding:.45rem 1.5rem .45rem 1.5rem; letter-spacing:.25rem;"> HEAT </span>
+				<td rowspan="2" class="emission"> <p style="text-align:right; font-size:12rem; margin:-.75rem; padding:.25rem 1.25rem .25rem .25rem;">0</p> </td>
+				<td class="nominal-emission"> <p style="text-align:right; font-size:.75rem; word-spacing:.1rem; margin-right:2rem;"> 4.79MJ NOMINAL EMISSION</td>
+				<td rowspan="3" id="status" > 
+					<span style="display:none;" class="critical">&tridot;</span>
+					<h2 class="lower-trindicator">&lrtri;</h2>
+					<span id="heat-label" class="inversion" style="padding:.45rem 1.5rem .45rem 1.5rem; letter-spacing:.25rem;"> HEAT </span>
 				</td>
 			</tr>
 			<tr>
 				<!--td spanned -->
-				<td style="text-align:center;"> <p style="text-alight:center; font-size:6rem; margin:0;padding:0;">1000</p> </td>
-				<!--td spanned -->
+				<td id="ammunition"> 1000 </td>
+				 <!--td spanned -->
 			</tr>
 			<tr>
 				<td colspan="2" class="bargraph">&block;&block;&block;&block;&block;&block;</td>
@@ -55,6 +109,13 @@ and to https://rsms.me/inter/
 		}
 		setInterval(cycleBargraph, 8000);
 
+
+		document.getElementById("heat-label").onclick = function(){	
+			document.querySelector("#status > span.critical").style.display="block";
+			let t = setTimeout(function(){ 
+				document.querySelector("#status > span.critical").style.display="none";
+			},2500);
+		}
 	</script>
 </body>
 </html>
