@@ -13,6 +13,23 @@ and to https://rsms.me/inter/
 	<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 	<link rel="stylesheet" href="nms-mfd.css">
 	<title>NMS MFD</title>
+	<style>
+		section {
+			display:flex;
+			flex-wrap:wrap;
+		}
+		section div.left{
+			flex: 1 1 auto;
+		}
+		section div.right{
+			flex: 1 1 auto;
+		}
+		section svg {
+			max-height: 50vh;
+			margin-bottom: -10vh;
+			margin-right: 5vh;
+		}
+	</style>
 </head>
 <body class="wipe-in-effect">
 	<div class="scanlines overlay vignette"></div>
@@ -21,12 +38,45 @@ and to https://rsms.me/inter/
 	</a></header>
 	<main>
 		<h1>Radiant Pillar BC-1</h1>
+		<section>
+		<div class="left">
 		<p>-123.45,+67.89</p>
-
 		<p>
 			<button>&ggg;</button>
-			<button class="simpler"> &rangle; &rangle; &rangle; </button>
+			<!-- alternate button is hidden for now <button class="simpler"> &rangle; &rangle; &rangle; </button>
+			-->
 		</p>
+		</div>
+		<div class="right"> 
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="a">
+      <stop offset="0" style="stop-color:#cbdee5;stop-opacity:.901996"/>
+      <stop offset="1" style="stop-color:#cbdee5;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="e" x1="90.34" x2="107.54" y1="82.21" y2="82.21" gradientUnits="userSpaceOnUse">
+      <stop offset="0" style="stop-color:#cbdee5"/>
+      <stop offset="1" style="stop-color:#cbdee5;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="d" x1="29.53" x2="12.33" y1="82.21" y2="82.21" gradientUnits="userSpaceOnUse">
+      <stop offset="0" style="stop-color:#cbdee5"/>
+      <stop offset="1" style="stop-color:#cbdee5;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="f" x1="59.71" x2="59.71" y1="87.8" y2="115.22" gradientUnits="userSpaceOnUse" href="#a"/>
+    <linearGradient id="c" x1="58.95" x2="59.59" y1="90.59" y2="122.94" gradientUnits="userSpaceOnUse" href="#a"/>
+    <radialGradient id="b" cx="58.03" cy="88.78" r="47.43" gradientTransform="matrix(1.44 0 .01 2.4 -26.42 -129.79)" gradientUnits="userSpaceOnUse" href="#a"/>
+  </defs>
+  <path d="M59.07 5.64 13.1 85.26h93.98z" style="-inkscape-stroke:none;fill:url(#b);font-variation-settings:normal;stop-color:#000;stroke-width:.5;stroke:#535353"/>
+  <path d="M58.34 112.75 13.57 85.52l93.15-.36z" style="-inkscape-stroke:none;fill:url(#c);font-variation-settings:normal;stop-color:#000;stroke-width:.5;stroke:#535353"/>
+  <path d="M58.34 112.39 59.07 6" style="fill:none;stroke-width:.5;stroke:#535353"/>
+  <path d="m23.06 68.47 6.1 27.59L12.66 85.3z" style="fill-opacity:.901996;fill:url(#d);stroke-width:.5;stroke:#535353"/>
+  <path d="m96.81 68.47-6.09 27.59L107.2 85.3z" style="fill-opacity:.901996;fill:url(#e);stroke-width:.5;stroke:#535353"/>
+  <path d="m58.54 88.58 14.5 17.55-14.5 8.42-12.19-8.42z" style="fill-opacity:.901996;fill:url(#f);font-variation-settings:normal;stop-color:#000;stroke-width:.5;stroke:#535353"/>
+  <path d="m58.85 61.5 23.69-17.98L58.85 80.5 36.88 43.53z" style="fill-opacity:.901996;fill:#323738;stroke-width:.5;stroke:#535353"/>
+</svg>
+</div>
+</section>
 
 		<p>
 		<label for="shield">SHIELD</label>
