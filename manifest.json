@@ -1,6 +1,8 @@
 {
   "name": "No Man's Sky Multi-Function Display",
   "short_name": "NMS-MFD",
+  "categories": ["entertainment","games"],
+  "description": "A simple toy reproduction of the Multi-Function Displays found in the star craft cockpits in HelloGames' legendary video game No Man's Sky. Load this up on tablets and/or mobile phones when you play No Man's Sky for to serve as props for a make-believe enhanced experience.",
   "theme_color": "#b01710",
   "background_color": "#000000",
   "display": "fullscreen",

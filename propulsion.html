@@ -7,12 +7,13 @@ and to https://rsms.me/inter/
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NMS MFD - SPEED</title>
 	<link rel="manifest" href="./manifest.json">
 	<link rel="icon" href="./favicon.ico">
 	<link rel="preconnect" href="https://rsms.me/">
 	<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 	<link rel="stylesheet" href="nms-mfd.css">
-	<title>NMS MFD - SPEED</title>
+	<script src="howler.js"></script>
 </head>
 
 <body class="wipe-in-effect">
@@ -81,8 +82,12 @@ then figure a way to animate it rolling through
 			gSpeed += 16;
 			document.getElementById("speed").innerText = gSpeed.toString() + "u/s";
 			//TODO: might be cool to have that boost speed hang and then fall off after a little while.
+			audConfirm.play();
 		});
 
+		//Global:Audio//
+		var audConfirm = new Howl({ src: ["cmd_chirp1.ogg"] });
+		//var audNotice  = new Howl({ src: ["cmd_chirp2.ogg"] });
 	</script>
 </body>
 </html>

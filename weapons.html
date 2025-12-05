@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <!--,
- __/  Great thanks to HelloGames,
-/     and to https://rsms.me/inter/ 
+ __/  Many thanks to HelloGames,
+/     and also to https://rsms.me/inter/ and https://howlerjs.com/ 
 '-->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NMS MFD - WEAPONS</title>
 	<link rel="manifest" href="./manifest.json">
 	<link rel="icon" href="./favicon.ico">
 	<link rel="preconnect" href="https://rsms.me/">
 	<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 	<link rel="stylesheet" href="nms-mfd.css">
-	<title>NMS MFD - WEAPONS</title>
 	<style>
 		/* V1
 		table {
@@ -65,6 +65,7 @@
 			font-weight: lighter;
 		}
 	</style>
+	<script src="howler.js"></script>
 </head>
 
 <body class="wipe-in-effect">
@@ -112,10 +113,15 @@
 
 		document.getElementById("heat-label").onclick = function(){	
 			document.querySelector("#status > span.critical").style.display="block";
+			audNotice.play();
 			let t = setTimeout(function(){ 
 				document.querySelector("#status > span.critical").style.display="none";
 			},2500);
 		}
+
+		//Global:Audio//
+	    	//var audConfirm = new Howl({ src: ["cmd_chirp1.ogg"] });	
+	    	var audNotice  = new Howl({ src: ["cmd_chirp2.ogg"] });	
 	</script>
 </body>
 </html>

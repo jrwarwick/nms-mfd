@@ -13,7 +13,7 @@ Recommendation: also check out these great websites for more awesome and actuall
 
 
 # Setup and Usage
-You will probably need to serve this up somehow so that your device webbrowser can navigate to it. You could do it with GitHub pages, or something like https://gist.github.com/willurd/5720255
+You will probably need to serve this up somehow so that your device web browser can navigate to it. You could do it with GitHub pages, or something like https://gist.github.com/willurd/5720255
 - quick and dirty oneliner serving  and/or a hyperlink thereto
 	'- an optional dockerfile , of course.
 full screen note?
@@ -21,10 +21,14 @@ full screen note?
 
 # Credits
 "Inter" typeface by rsms.me
+Howler.js by goldfire
 Hello Games visual style, layout, concept, terms
 The community-minded coders and web designers all throughout the world wide web (thanks for the vignette code, animation techniques, etc.)
-https://upload.wikimedia.org/wikipedia/commons/d/d8/Caffeine.svg (optimized in this repo)
-
+WikiMedia for SVG images (optimized in this repo)
+	https://upload.wikimedia.org/wikipedia/commons/d/d8/Caffeine.svg 
+	https://upload.wikimedia.org/wikipedia/commons/7/71/Graphene_structure.svg
+	https://commons.wikimedia.org/wiki/File:Poly(dimethylsiloxan).svg
+	
 # License
 [MIT](https://rem.mit-license.org/license.htm)
 
@@ -33,8 +37,12 @@ https://upload.wikimedia.org/wikipedia/commons/d/d8/Caffeine.svg (optimized in t
  - proper linting of css, html, js
 
  - replicate "canonical" displays: 
-	- ship id/status
+	- ship id/status/overview 
+		- this is the one with file named "cockpit.html", might want a different name for that. kinda confusing
+		- note its the one with shields, too
+		- interactivity #TODO: have cycling top/side/front view toggle on click. OR: actual 3D wireframe render and finger-drag to rotate freeview.
 	x ships weapons
+		- interactivity #TODO: tapping on the weapon name cycles through available weapons, perhaps?
 	- ship speed ( + pulse engine "throttle", pulse engine fuel )
 	- locality (planetary approach/summary)
 		- get the little status bar to be glued/pinned to the bottom without messing up the rest of flow
@@ -62,9 +70,22 @@ https://upload.wikimedia.org/wikipedia/commons/d/d8/Caffeine.svg (optimized in t
 
  - custom display: rules and/or coordinated implementation of Rock, Paper, Scissors, Lizard, Spock. But: Gek, Vy'Keen, Korvax, Sentinel, Anomaly
 
- - custom display molecular needs tap event on the molecule to cycle to other interesting molecules: hydrazine, graphene, hydrochloric acid, silicone rubber, silica, ethanol, kerosene, ATP, polyethylene, etc. Also off to the side stats for toxicity, radioactivity, acidity, etc.
+ - custom display: two-body distance, velocity, acceleration diagram/solver
 
- - branch out a little and find some other displays, such as those on freighters and stations that might fit in as well.
+ - custom display molecular 
+	- needs tap event on the molecule to cycle to other interesting molecules: 
+		x hydrazine
+		x graphene
+		- hydrochloric acid
+		x silicone rubber (polysiloxane)
+		- silica
+		- ethanol
+		- kerosene
+		- ATP
+		- polyethylene, etc. 
+	- Also off to the side stats for toxicity, radioactivity, acidity, oxidity, oddity, etc.
+
+ - branch out a little and find some other displays in-game, such as those on freighters and stations that might fit in as well.
 
 
  - the bar on the top is a multi-function: 
@@ -115,6 +136,7 @@ https://upload.wikimedia.org/wikipedia/commons/d/d8/Caffeine.svg (optimized in t
 		<link rel="manifest" href="/site.webmanifest">
 
  - "native" apk packaging/appification and/or is there an option for apple? Probably not.
+ - do we need/want service worker cacheing? https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/#the-service-worker-to-cache-the-apps-files-on-the-local-device-swjs
 
 More externalish and far-out-there stuff
  - script/tool/sheets-overrides to merge/enhance Assistant for NMS to look more like this.
