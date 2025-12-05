@@ -27,6 +27,7 @@ The community-minded coders and web designers all throughout the world wide web 
 WikiMedia for SVG images (optimized in this repo)
 	https://upload.wikimedia.org/wikipedia/commons/d/d8/Caffeine.svg 
 	https://upload.wikimedia.org/wikipedia/commons/7/71/Graphene_structure.svg
+	https://upload.wikimedia.org/wikipedia/commons/c/c2/Hydrazin.svg
 	https://commons.wikimedia.org/wiki/File:Poly(dimethylsiloxan).svg
 	
 # License
