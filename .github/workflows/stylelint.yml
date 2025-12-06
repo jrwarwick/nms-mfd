@@ -1,0 +1,12 @@
+name: HTML Validation
+on: [push]
+
+jobs:
+  linters:
+    - name: HTML5Validator
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v6
+        - uses: Cyb3r-Jak3/html5validator-action
+          with:
+            root: /
