@@ -161,7 +161,7 @@ button {
     line-height: .1rem;
     vertical-align: center;
     /* margin-top: -.25rem; */
-    transform: scaley(1.25);
+    transform: scaleY(1.25);
     font-size: 3rem;
     color: Gold;
 }
