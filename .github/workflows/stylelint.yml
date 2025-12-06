@@ -1,0 +1,14 @@
+name: Stylelint
+on: [push]
+
+jobs:
+  linters:
+    name: stylelint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions-hub/stylelint@master
+        env:
+          PATTERN: "*.css"
+          # Optional: Specify indentation if your config doesn't handle it
+          # INDENT_SPACES: 2
