@@ -203,7 +203,7 @@ p.meterlabel {	/* tested working with <p>   e.g., SPEEDOMETER READING */
 	margin-left:2rem;
 }
 p.metric {
-	text-alight:right; 
+	text-align:right; 
 	font-size:10rem; 
 	margin:0;
 	padding:0 1rem 0 1rem;
@@ -224,9 +224,9 @@ footer {
 	padding: .5rem;
 	font-size:1.25rem;
 }
-footer.fullbar {  /*full bar is intended to be used with the footer element empty, to avoid lineheight.*/
-	/*width:97%;*/
-	/*height: 0;*/
+footer.fullbar {  /* full bar is intended to be used with the footer element empty, to avoid lineheight. */
+	/* width:97%; */
+	/* height: 0; */
 	background-color: LemonChiffon;
 	border:.2rem solid Khaki;
 	padding:.1rem;
