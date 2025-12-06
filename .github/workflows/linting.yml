@@ -12,3 +12,11 @@ jobs:
           PATTERN: "*.css"
           # Optional: Specify indentation if your config doesn't handle it
           # INDENT_SPACES: 2
+
+   validators:
+     name: HTML5Validator
+     steps:
+       - uses: actions/checkout@v6
+       - uses: Cyb3r-Jak3/html5validator-action
+         with:
+           root: /
