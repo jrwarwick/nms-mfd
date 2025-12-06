@@ -1,6 +1,7 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
+    "color-hex-length": null,
     "value-keyword-case": null,
     "rule-empty-line-before": null
   }
