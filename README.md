@@ -36,6 +36,11 @@ WikiMedia for SVG images (optimized in this repo)
 
 # TODO:
  - proper linting of css, html, js
+	+ have a start via github actions, but I'm a novice and its a mess
+
+ - look into adding this:  https://whatpwacando.today/wake-lock
+
+ - consider this technique instead of merely "on-load" wipe, though I'm not sure if it is customizable enough to get the right canonical "wipe" effect:  https://whatpwacando.today/view-transitions
 
  - replicate "canonical" displays: 
 	- ship id/status/overview 
@@ -85,14 +90,17 @@ WikiMedia for SVG images (optimized in this repo)
 		- ATP
 		- polyethylene, etc. 
 	- Also off to the side stats for toxicity, radioactivity, acidity, oxidity, oddity, etc.
+	- Also off to the side stats for atomic elements proportional (for a presumed input recipe for, say, a Refiner). Could be stored in a quick and dirty JSON string inside the SVG file in some metadata or attribute. e.g., for "dihydrous_oxide.svg":  {"elements":[{"symbol":"O","parts":1},{"symbol","H","parts":2}]}
 
  - branch out a little and find some other displays in-game, such as those on freighters and stations that might fit in as well.
+	- noticed in SOME rarer ships there already are a couple of tertiary displays, seemingly for environment or something. monotone.
 
 
  - the bar on the top is a multi-function: 
 	- datagram showing with positive affirmation that data is flowing, 
 	- which function-views have new-data/alert 
 	x also a kind of simple Nav
+		- perhaps disthinguish swipe left/swipe right? I.e., a page-flip analog.
 
  - visual effects overlay toggle, fullscreen toggle, sounds toggle
  - on closer examination of the overlay projection and glitching effects, probably need a little overhaul, if matching and authenticity are (a/)the goal. Particularly the flicker and larger display projection scan line things
@@ -121,6 +129,8 @@ WikiMedia for SVG images (optimized in this repo)
 	- hover and press classes that do things like increase brightness or make it white and maybe glow more
 
  - clean up, extract styling on the primary table in weapons.html, turn it into proper rules and classes in nms-mfd.css
+
+ - localStorage scheme for Ship Name, Player Name, Planet Name; then, if set, replace "Nemo" and "Radiant Pillar" and "Ubi Sumus" with those. Probably a simple entry form page for those values. 
 
  - "wipe effect" for page transitions (and sound effect from game)
 
