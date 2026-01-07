@@ -23,9 +23,20 @@
 			text-transform: capitalize;
 			margin-top:-.05rem;
 		}
+		table.diagrammatic {
+			/* style="border:none; border-collapse:collapse; width:100%;" border="2"
+			*/
+		  border:none; border-collapse:collapse; 
+			width:100%;
+		}
 		td.display-cell {
 			text-align:right;
 			border: .1rem solid whitesmoke;
+		}
+		td.meta-cell {
+			width:25%; 
+			border-right:none; border-top:none; border-bottom: .075rem solid silver; border-left: .1rem solid GhostWhite; 
+			padding:.5rem; vertical-align:bottom;
 		}
 	</style>
 </head>
@@ -52,9 +63,9 @@ then figure a way to animate it rolling through
 		<span class="datagram">  &marker; &block; &block; &block; &block; &block;</span> <span class="datagram"> &block; &block; &block; &block; &block; &block;</span> <span class="datagram"> &block; &block; &block; &block; &block; &block;</span>
 	</a></header>
 	<main>
-		<table style="border:none; border-collapse:collapse; width:100%;" border="2"> <!-- 3 columns and 4 rows, with some spanning -->
+		<table class="diagrammatic"> <!-- 3 columns and 4 rows, with some spanning -->
 			<tr>
-				<td style="width:25%; border-right:none; border-top:none; padding:.5rem; vertical-align:bottom;"> 
+				<td class="meta-cell" > 
 					<!--
 					<span style="float:left; position:relative; top:0;left:0; margin:-7.5rem 0 0 -.75rem;">&blacksquare;</span>
 					-->
@@ -68,7 +79,7 @@ then figure a way to animate it rolling through
 				</td>
 				<td class="display-cell"> 
 					<p class="meterlabel" suspend-tyle="text-align:left; font-size:.75rem; word-spacing:.1rem; margin-left:2rem;">MOLECULAR STANDARD MODEL // NET CHARGE: 0</p> 
-					<p class="metric" id="molecular-model" suspend-tyle="text-alight:right; font-size:10rem; margin:0;padding:0 1rem 0 1rem;"><img id="molecular-model-graphic" src="Caffeine.svg" /></p> 
+					<p class="metric" id="molecular-model" suspend-tyle="text-alight:right; font-size:10rem; margin:0;padding:0 1rem 0 1rem;"><img id="molecular-model-graphic" alt="molecular model diagram" src="Caffeine.svg" /></p> 
 				</td>
 			</tr>
 		</table>
